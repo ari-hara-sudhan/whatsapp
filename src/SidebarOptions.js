@@ -2,24 +2,36 @@ import React, { useEffect, useState } from 'react'
 import "./SidebarOptions.css"
 import { Avatar } from '@material-ui/core'
 
-function SidebarOptions({channel,timestamp}) {
+function SidebarOptions({channel,timestamp,addchat}) {
     const[seed,setSeed]=useState()
-    console.log(seed)
+   
 
     useEffect(()=>{
 
         setSeed(Math.floor(Math.random()*5000))
     },[])
+    const createRoom=(e)=>{
+        console.log("room created...")
+    }
     return (
         <div className="sidebaroptions">
-            <Avatar src={`https://avatars.dicebear.com/api/
-             human/12222.svg`}/>
-            <div className="sidebaroptions__info">
-                <h4>{channel}</h4>
-                <h5>{timestamp}</h5>
+            {
+            addchat?(
+                <h3 onClick={createRoom}>AddNewChat</h3>
+            ):(
+                <>
+             <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
+               <div className="sidebaroptions__info">
+                   <h4>{channel}</h4>
+                   <h5>{timestamp}</h5>
+   
+               </div>
+               </>
+               
+            )
 
-            </div>
-            
+            }
+          
         </div>
     )
 }

@@ -3,6 +3,7 @@
     align-items:center;
     padding:10px;
     border-bottom:1px solid lightgray;
+    cursor:pointer;
 }
 .sidebaroptions__info{
     padding:10px;

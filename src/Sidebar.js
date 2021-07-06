@@ -40,6 +40,8 @@ function Sidebar() {
 
             </div>
             <div className="sidebar__options">
+                <SidebarOptions addchat/>
+
                 <SidebarOptions
                 channel="hari"
                 timestamp="3 min ago"

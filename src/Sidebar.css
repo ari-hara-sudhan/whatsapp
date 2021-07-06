@@ -1,0 +1,32 @@
+.sidebar{
+    flex:0.3;
+    border-right:2px solid lightgray;
+}
+.sidebar__header{
+    display:flex;
+    padding:10px;
+    align-items:center;
+    justify-content: space-between;
+}
+.sidebar__headerRight{
+    display:flex;
+    cursor:pointer;
+}
+.sidebar__input{
+    background:#fafafa;
+    padding:10px;
+
+}
+.sidebar__inputContainer{
+    display:flex;
+    align-items:center;
+    background:rgba(211, 211, 211, 0.801);
+    border-radius:20px;
+    padding:10px;
+}
+.sidebar__inputContainer>input{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background-color: transparent;
+}

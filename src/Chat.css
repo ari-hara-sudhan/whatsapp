@@ -41,15 +41,18 @@
     border-radius:20px;
     cursor:pointer;
     background-color: white;
-    
+    margin-bottom:20px;
+    z-index:10;
 }
 
 .chat__name{
     position:absolute;
     top:-17px;
-    font-size:10px;
-    font-weight:700;
+    font-size:8px;
+    font-weight:760;
     right:0;
+    display: inline !important;
+    z-index:1;
 }
 .chat__user{
     background:rgb(169, 235, 169);

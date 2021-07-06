@@ -5,6 +5,13 @@
     border-bottom:1px solid lightgray;
     cursor:pointer;
 }
+.sidebaroptions:hover{
+    background-color: lightgray;
+}
 .sidebaroptions__info{
     padding:10px;
+}
+a{
+    text-decoration: none;
+    color:black;
 }

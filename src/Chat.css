@@ -16,6 +16,11 @@
     padding:10px;
     
 }
+.chat__center>p{
+    color:gray;
+    font-size:13px;
+    font-weight:700;
+}
 .chat__icon{
     display:flex;
     justify-content: space-between;
@@ -26,8 +31,55 @@
     background-image: url("https://th.bing.com/th/id/OIP.e55gD5GPKL8JFTrTTZ9eGQHaN2?pid=ImgDet&w=1027&h=1920&rs=1");
     background-repeat: repeat;
     background-position: center;
-    padding:30px;
-  
-   
+    padding:30px;  
     
+}
+.chat__message{
+    position:relative;
+    width:fit-content;
+    padding:10px;
+    border-radius:20px;
+    cursor:pointer;
+    background-color: white;
+    
+}
+
+.chat__name{
+    position:absolute;
+    top:-17px;
+    font-size:10px;
+    font-weight:700;
+    right:0;
+}
+.chat__user{
+    background:rgb(169, 235, 169);
+    margin-left:auto;
+}
+.chat__timestamp{
+    font-size: xx-small;
+    margin-left:10px;
+    font-weight:bold;
+}
+.chat__footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:63px;
+    background-color: lightgray;
+    border-top:1px solid  lightgray;
+}
+.chat__footer>form{
+    flex:1;
+    display:flex;
+}
+.chat__footer>form>input{
+    flex:1;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    padding:10px;
+    background-color:white;
+}
+.chat__footer>form>button{
+    display:none;
 }

@@ -12,6 +12,9 @@ function Chat() {
     const[seed ,setSeed]=useState()
     const {roomid}=useParams()
     const [roomname,setRoomname]=useState()
+    const[input,setInput]=useState()
+    const[messages,setMessages]=useState()
+    
     useEffect(()=>{
         setSeed(Math.random(Math.floor()*5000))
     },[])
@@ -26,6 +29,14 @@ function Chat() {
         }
 
     },[roomid])
+    const sendMessage=(e)=>{
+        e.preventDefault();
+        db.collection("rooms").doc(roomid).collection("messages").
+        onSnapshot(snapshot=>{
+            setMessages(snapshot.docs.map(doc=>doc.data()))
+            
+        })
+    }
     return (
         <div className="chat">
             <div className="chat__header">
@@ -57,8 +68,8 @@ function Chat() {
             <div className="chat__footer">
                 <InsertEmoticonIcon/>
                 <form>
-                    <input placeholder="Type some Message.." type="text"/>
-                    <button>send</button>
+                    <input value={input} onChange={e=>setInput(e.target.value)} placeholder="Type some Message.." type="text"/>
+                    <button onClick={sendMessage} type="submit">send</button>
                 </form>
                 <MicIcon/>
 

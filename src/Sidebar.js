@@ -8,8 +8,10 @@ import { IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import SidebarOptions from './SidebarOptions';
 import db from './firebase';
+import { useStateValue } from './StateProvider';
 function Sidebar() {
     const [rooms,setRooms]=useState([])
+    const [{user},dispatch]=useStateValue()
 
     useEffect(()=>{
         db.collection("rooms").onSnapshot(snapshot=>{
@@ -20,7 +22,7 @@ function Sidebar() {
         <div className="sidebar">
             <div className="sidebar__header">
                 <Avatar
-                
+               src={user?.photoURL}
                 />
                 <div className="sidebar__headerRight">
                     <IconButton>

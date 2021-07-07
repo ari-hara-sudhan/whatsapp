@@ -32,7 +32,11 @@
     background-repeat: repeat;
     background-position: center;
     padding:30px;  
+    overflow-y:scroll;
     
+}
+.chat__body::-webkit-scrollbar{
+    display:none;
 }
 .chat__message{
     position:relative;
